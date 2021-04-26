@@ -4,7 +4,7 @@ from pydantic import BaseSettings
 
 class Settings(BaseSettings):
     app_name: str = "Default Name"
-    database_url: str = "sqlite:///./database.db"
+    database_url: str = "sqlite:///./app/database.db"
     secret_key: str
 
     class Config:
