@@ -10,12 +10,18 @@ pydantic: (https://pydantic-docs.helpmanual.io/)
 
 ## Install packages
 
-```
+```bash
 pip install -r requirements.txt
+```
+
+## Create .env
+
+```bash
+cp .env-example .env
 ```
 
 ## Execute Uvicorn
 
-```
+```bash
 uvicorn app.main:app --reload
 ```
