@@ -5,13 +5,15 @@ services:
         container_name: PYTHON-API-BACKEND
         build: .
         ports:
-          - "8080:8080"
+          - "8000:8000"
         volumes:
           - .:/opt/code/api
+        command: uvicorn app.main:app --reload
         depends_on:
           - db
     db:
         image: mysql:latest
+        command: [ "--default-authentication-plugin=mysql_native_password" ]
         container_name: MYSQL-API-BACKEND
         env_file:
           - ./.env

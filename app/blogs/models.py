@@ -7,8 +7,8 @@ class Blog(Base):
     __tablename__ = 'blogs'
 
     id = Column(Integer, primary_key=True, index=True)
-    title = Column(String)
-    body = Column(String)
+    title = Column(String(100))
+    body = Column(String(200))
     user_id = Column(Integer, ForeignKey('users.id'))
 
     creator = relationship("User", back_populates="blogs")
