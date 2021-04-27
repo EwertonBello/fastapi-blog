@@ -15,7 +15,8 @@ _password = get_settings().mysql_root_password
 _host = get_settings().mysql_host
 _database_name = get_settings().mysql_database
 
-SQLALCHEMY_DATABASE_URL = f"mysql://{_user}:{_password}@{_host}/{_database_name}"
+SQLALCHEMY_DATABASE_URL = f"mysql://{_user}:{_password}@{_host}/{_database_name}?charset=utf8"
+# SQLALCHEMY_DATABASE_URL = f"mysql://root:password@{_host}/sample_db"
 # SQLALCHEMY_DATABASE_URL = "mysql://root:secret@127.0.0.1/blog_db"
 
 

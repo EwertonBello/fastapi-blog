@@ -7,7 +7,7 @@ class Settings(BaseSettings):
     database_url: str = "sqlite:///./app/database.db"
     mysql_database: str = "my_db"
     mysql_host: str = "localhost"
-    mysql_root_password: str = ""
+    mysql_root_password: str
     mysql_username: str = "root"
     secret_key: str
 
