@@ -18,6 +18,9 @@ pip install -r requirements.txt
 
 ```bash
 cp .env-example .env
+
+# generate secret_key
+openssl rand -hex 32
 ```
 
 ## Execute Uvicorn
