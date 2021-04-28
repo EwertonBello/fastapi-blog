@@ -12,12 +12,11 @@ services:
         depends_on:
           - db
     db:
-        image: mysql:latest
-        command: --default-authentication-plugin=mysql_native_password
-        container_name: MYSQL-API-BACKEND
+        image: postgres:latest
+        container_name: POSTGRES-API-BACKEND
         env_file:
           - ./.env
         ports:
-          - "127.0.0.1:3306:3306"
+          - "5432:5432"
         volumes:
           - .:/opt/code/api/data 

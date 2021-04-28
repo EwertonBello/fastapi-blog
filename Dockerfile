@@ -18,10 +18,10 @@ RUN apt-get install -y python3-dev default-libmysqlclient-dev build-essential
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
-RUN pip install mysqlclient
+RUN pip install psycopg2-binary
 
 # Expose the default port
-EXPOSE 3306
+EXPOSE 5432
 EXPOSE 8000
 
 # COPY ./app /app
