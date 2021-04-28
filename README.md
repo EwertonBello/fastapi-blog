@@ -23,8 +23,18 @@ cp .env-example .env
 openssl rand -hex 32
 ```
 
+## Run docker with database
+
+```bash
+docker-compose up
+```
+
 ## Execute Uvicorn
 
 ```bash
 uvicorn app.main:app --reload
 ```
+
+# Endpoints
+
+![Endpoints](./docs.png)
