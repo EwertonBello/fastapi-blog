@@ -28,3 +28,7 @@ openssl rand -hex 32
 ```bash
 uvicorn app.main:app --reload
 ```
+
+# Endpoints
+
+![Endpoints](./docs.png)
