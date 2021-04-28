@@ -8,12 +8,6 @@ pydantic: (https://pydantic-docs.helpmanual.io/)
 
 # Running
 
-## Install packages
-
-```bash
-pip install -r requirements.txt
-```
-
 ## Create .env
 
 ```bash
@@ -26,13 +20,8 @@ openssl rand -hex 32
 ## Run docker with database
 
 ```bash
+docker-compose build
 docker-compose up
-```
-
-## Execute Uvicorn
-
-```bash
-uvicorn app.main:app --reload
 ```
 
 # Endpoints

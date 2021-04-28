@@ -1,5 +1,3 @@
-FROM mysql:latest
-
 FROM python:3.8
 
 #create folder
@@ -13,7 +11,6 @@ WORKDIR /opt/code/api
 RUN apt-get update
 RUN apt-get install -y python3-setuptools nano 
 RUN apt-get install -y python3-pip
-RUN apt-get install -y python3-dev default-libmysqlclient-dev build-essential
 
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
